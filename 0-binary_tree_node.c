@@ -24,5 +24,18 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 	new_node->left = NULL;
 	new_node->right = NULL;
 
+	/** Check if parent already has a left-child */
+	if (parent->left != NULL)
+	{
+		/** Set the existing left-child as the new node's left-child */
+		new_node->left = parent->left;
+
+		/** Update the parent pointer of the existing left-child */
+		parent->left->parent = new_node;
+	}
+
+	/** Set new_node as the parent's left-child */
+	parent->left = new_node;
+
 	return (new_node);
 }
