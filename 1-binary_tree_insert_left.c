@@ -10,6 +10,8 @@
  */
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 {
+	binary_tree_t *new_node;
+
 	/** Check for NULL parent */
 	if (parent == NULL)
 	{
@@ -17,7 +19,7 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 	}
 
 	/** Allocate memory for the new node */
-	binary_tree_t *new_node = malloc(sizeof(binary_tree_t));
+	new_node = malloc(sizeof(binary_tree_t));
 
 	/** Check for memory allocation failure */
 	if (new_node == NULL)
