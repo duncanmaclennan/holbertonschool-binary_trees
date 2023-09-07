@@ -25,7 +25,7 @@ int binary_tree_is_leaf(const binary_tree_t *node)
 }
 
 /**
- * binary_tree_height - goes through binary tree using post-order traversal
+ * binary_tree_height - measures the height of a binary tree
  * @tree: pointer to the root of the tree to traverse
  * Return: height of tree if yay, otherwise 0 if nay
  */
